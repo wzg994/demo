@@ -4,6 +4,8 @@ import com.wzg.demo.util.IDCardUtil;
 import com.wzg.demo.util.Result;
 import com.wzg.demo.util.ResultUtil;
 import com.wzg.demo.util.getTime;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletResponse;
@@ -13,8 +15,16 @@ import java.util.*;
 import java.util.logging.SimpleFormatter;
 
 @RestController()
+//@Controller
 @RequestMapping("/wzg")
 public class HelloController {
+
+    @RequestMapping("/test")
+    public String test(Model model){
+        model.addAttribute("msg","<h1>hello,springboot</h1>");
+        model.addAttribute("user",Arrays.asList("wzg","springboot"));
+        return "test";
+    }
 
     @GetMapping("/hello")
     public String hello(){
@@ -29,7 +39,7 @@ public class HelloController {
         System.out.println(timefor);
         System.out.println(times);
         time=times;//86400
-        String timess="2020-12-31 18:00:00";
+        String timess="2021-04-21 18:00:00";
         Date date=timefor.parse(timess);
         System.out.println(date);
 //        String datatime="2015-09-22 15:16:48";
@@ -73,10 +83,10 @@ public class HelloController {
 
     @RequestMapping("/getTime")
     public Result getTimes() throws ParseException {
-            getTime gettime=new getTime();
+        getTime gettime=new getTime();
         Double aDouble = 123.25;
 //        Double aDouble = gettime.get("2021-01-08 18:00:00");
-        String s = gettime.get("2021-01-15 18:00:00","周末");
+        String s = gettime.get("2021-02-06 17:30:00","放假");
 //        String time="";
 //        SimpleDateFormat timefor= new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 //        String times=timefor.format(new Date());

@@ -11,16 +11,34 @@ public class IDCardUtil {
 
     public static void main(String[] args) {
 //        IDCardUtil idCardUtil=new IDCardUtil();
-        Scanner scanner=new Scanner(System.in);
-        String line= scanner.nextLine();
-        Boolean ss=isValid(line);
-        System.out.println("通过控制台判断"+ss);
-        isValid("350125199809132459");
-        IDCardUtil.isValid("350125199809132459");
+//        Scanner scanner=new Scanner(System.in);
+//        String line= scanner.nextLine();
+//        Boolean ss=isValid(line);
+//        System.out.println("通过控制台判断"+ss);
+        isValid("350125199804191329");
+        int aa=5175+1940-3000-500-300-1000-90-897;
+//        System.out.println("余额为"+aa);
+
+        int bb=5175-640-750-3300-1000;
+        System.out.println("下个月余额为"+bb);
+        double money=5175;
+        System.out.println("下个月工资"+money);
+        int ccc=5*19+(15*10)+200+(2*80)+100+(40+40+200);//25天
+        System.out.println("发工资前要用的钱为"+ccc);
+        int ssss=4503-4163;
+        int dddd=1583+4333+4163;
+        int dddd2=1579+2000;
+        double dd4=800+839.43+1000+ccc;
+        double sssss=6000/12;
+        System.out.println("5月待还"+dd4);
+        System.out.println("5月剩余"+(money-dd4));
+        System.out.println("负债"+dddd2);
+        System.out.println("买电脑分六期"+sssss);
+        IDCardUtil.isValid("350125199804191329");
         System.out.println(IDCardUtil.isValid("350125199805201234"));
         System.out.println(IDCardUtil.isValid("350125199805201258"));
         System.out.println(IDCardUtil.isValid("412725200105138656"));
-        System.out.println(isValid("350125199809132459"));
+        System.out.println(isValid("350125199804191329"));
     }
 
     /**
