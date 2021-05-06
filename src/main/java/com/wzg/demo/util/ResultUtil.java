@@ -16,6 +16,11 @@ public class ResultUtil {
         return success(null);
     }
 
+    public static Result success(String code,String msg) {
+        Result result=new Result(code,msg);
+        return result;
+    }
+
     public static Result error(String code,String msg){
         Result result=new Result(code,msg);
         return result;

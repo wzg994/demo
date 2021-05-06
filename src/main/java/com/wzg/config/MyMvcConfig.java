@@ -20,8 +20,12 @@ import java.util.Locale;
 @Configuration
 //@EnableWebMvc //这玩意就是导入了一个雷：D饿了gatinWebMvcConfiguration：从容器中获取所有的webmvcconfig
 public class MyMvcConfig implements WebMvcConfigurer {
-
-    //ViewResolver实现了视图解析器接口的类，我们就可以把它看做视图解析器
+    @Override
+    public void addViewControllers(ViewControllerRegistry registry) {
+        registry.addViewController("/").setViewName("index");
+        registry.addViewController("/index.html").setViewName("index");
+    }
+//ViewResolver实现了视图解析器接口的类，我们就可以把它看做视图解析器
 
 /*    @Override
     public void addViewControllers(ViewControllerRegistry registry) {

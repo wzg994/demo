@@ -8,6 +8,8 @@ server:
   tomcat:
     uri-encoding: UTF-8
 spring:
+  message:
+    basename: i18n.login
   profiles:
     active: dev
   datasource:

@@ -9,9 +9,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class IndexController {
 
-    @RequestMapping("/index")
-    public String index(){
-        System.out.println("进入test");
-        return "test";
-    }
+//    @RequestMapping("/index")
+//    public String index(){
+//        System.out.println("进入test");
+//        return "test";
+//    }
 }
